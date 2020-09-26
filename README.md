@@ -9,9 +9,9 @@ helper tool to print on both sides for single side printer.
    pip install -r requirements.txt
    ```
 4. ### Run program
-  ```cmd
-  python pdf_process_v0.py -f Assignment.pdf -m 1
-  ```
+   ```cmd
+   python pdf_process_v0.py -f Assignment.pdf -m 1
+   ```
   now we get three files 
   * odd_pages.pdf (odd pages from original document)
   * even_pages.pdf (Even pages from original document)
