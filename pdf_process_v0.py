@@ -41,12 +41,17 @@ def separate_odd_even_pages():
         output_even.write(even_file_writer)
     even_file_writer.close()
 
+    reverse_pages('even_pages.pdf')
+
     print("[INFO] Convertion end and files saved")
 
-def reverse_pages():
+def reverse_pages(f_name=None):
 
-    print("[INFO] Loading file {}".format(file_name))
-    input_pdf = PdfFileReader(open(file_name,"rb"))
+    if not f_name:
+        f_name = file_name
+
+    print("[INFO] Loading file {}".format(f_name))
+    input_pdf = PdfFileReader(open(f_name,"rb"))
 
     reversed_writer = PdfFileWriter()
 
@@ -65,6 +70,6 @@ def reverse_pages():
 
 if args["method"] == 1:
     separate_odd_even_pages()
-    
+
 elif args["method"] == 2:
     reverse_pages()
